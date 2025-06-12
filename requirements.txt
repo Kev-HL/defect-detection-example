@@ -1,0 +1,7 @@
+jupyter
+pandas
+numpy
+pathlib
+opencv-python
+tensorflow
+matplotlib
