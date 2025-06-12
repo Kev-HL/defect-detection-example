@@ -32,6 +32,7 @@ The dataset is used strictly for non-commercial, educational purposes.
 - `notebooks/`: Jupyter notebooks for exploration and modeling
 - `app/`: inference code and deployment interface
 - `models/`: saved trained models
+- `src`: scripts
 
 
 ## How to Run
