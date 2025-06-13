@@ -13,8 +13,8 @@ test_dir = root / 'test'
 gt_dir = root / 'ground_truth'
 
 # Function to extract defect bounding boxes from mask images
-defect_classes = [p.name for p in gt_dir.iterdir()]  # e.g., ['crack', 'dent', ...]
-def mask_to_boxes(mask_path, threshold=127):
+defect_classes = [p.name for p in gt_dir.iterdir()]  # There is one folder per defect class
+def mask_to_boxes(mask_path, threshold=127): # Default threshold for binary mask
     mask = cv2.imread(str(mask_path), cv2.IMREAD_GRAYSCALE)
     if mask is None or mask.max() == 0:
         return []
