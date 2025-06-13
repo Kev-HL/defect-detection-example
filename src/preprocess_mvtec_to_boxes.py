@@ -32,6 +32,7 @@ for split in ['train', 'test']:
     for img_path in good_dir.glob('*.png'):
         records.append({
             'image_path': str(img_path),
+            'set': split,  # 'train' or 'test'
             'class_name': 'good',
             'x_min': None, 'y_min': None, 'x_max': None, 'y_max': None
         })
@@ -51,6 +52,7 @@ for defect_class in defect_classes:
             x_min, y_min, x_max, y_max = box
             records.append({
                 'image_path': str(img_path),
+                'set': 'test',
                 'class_name': defect_class,
                 'x_min': x_min, 'y_min': y_min, 'x_max': x_max, 'y_max': y_max
             })
