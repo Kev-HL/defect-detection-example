@@ -34,7 +34,7 @@ for split in ['train', 'test']:
             'image_path': str(img_path),
             'set': split,  # 'train' or 'test'
             'class_name': 'good',
-            'x_min': None, 'y_min': None, 'x_max': None, 'y_max': None
+            'x_min': -1, 'y_min': -1, 'x_max': -1, 'y_max': -1
         })
 
 # Second, handle defect examples from test set
