@@ -11,6 +11,7 @@ __pycache__/
 /data/
 # Don't track trained model files
 /models/
+/notebooks/best_model.keras
 
 # VSCode
 # Editor-specific settings
