@@ -18,10 +18,14 @@ def mask_to_boxes(mask_path, threshold=127): # Default threshold for binary mask
     mask = cv2.imread(str(mask_path), cv2.IMREAD_GRAYSCALE)
     if mask is None or mask.max() == 0:
         return []
+    height, width = mask.shape
     _, thresh = cv2.threshold(mask, threshold, 255, cv2.THRESH_BINARY)
     contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     boxes = [cv2.boundingRect(cnt) for cnt in contours]  # (x, y, w, h)
-    return [(x, y, x + w, y + h) for x, y, w, h in boxes]
+    return [
+            (x / width, y / height, (x + w) / width, (y + h) / height)
+            for x, y, w, h in boxes
+        ]
 
 # Empty list to hold records
 records = []
