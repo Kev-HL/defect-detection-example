@@ -22,3 +22,6 @@ __pycache__/
 .env
 # Catch other .env-like files
 *.env
+
+# Exclude final model file
+!/models/final/best_model.tflite
