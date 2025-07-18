@@ -1,0 +1,38 @@
+# Byte-compiled / cache
+# Python cache folders
+__pycache__/
+# Compiled Python files (.pyc, .pyo, etc.)
+*.py[cod]
+# Temporary files from Jupyter notebooks
+*.ipynb_checkpoints/
+
+# Environment
+# Environment variables files
+.env
+# Catch other .env-like files
+*.env
+
+# VSCode
+# Editor-specific settings
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# Data
+# Don't track datasets
+/data/
+# Don't track trained model files
+/models/
+# Don't track notebooks
+/notebooks/
+# Don't track scripts
+/src/
+
+# Other project files
+README.md
+/requirements.txt
+
+# Exclude final model file
+!/models/final/best_model.tflite

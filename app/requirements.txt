@@ -1,0 +1,5 @@
+numpy
+ai-edge-litert
+pillow
+fastapi
+uvicorn
