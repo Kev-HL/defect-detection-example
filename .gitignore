@@ -23,5 +23,8 @@ __pycache__/
 # Catch other .env-like files
 *.env
 
-# Exclude final model file
-!/models/final/best_model.tflite
+# Except (un-ignore) the final subdirectory
+!models/final/
+
+# Except (un-ignore) the model file in the final subdirectory
+!models/final/best_model.tflite
