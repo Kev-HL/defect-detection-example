@@ -28,6 +28,24 @@ COPY --chown=appuser:appuser app/main.py .
 # Copy model file
 COPY --chown=appuser:appuser models/final/best_model.tflite .
 
+# Copy HTML templates
+RUN mkdir -p templates && chown -R appuser:appuser templates
+COPY --chown=appuser:appuser app/templates/ templates/
+
+# Create static directories for uploads, results and samples
+RUN mkdir -p static/uploads static/results static/samples && chown -R appuser:appuser static
+
+# Copy sample images
+COPY --chown=appuser:appuser app/samples/ static/samples/
+
+# Copy font file (and license) for text rendering on images
+RUN mkdir -p fonts && chown -R appuser:appuser fonts
+COPY --chown=appuser:appuser app/fonts/OpenSans-Bold.ttf fonts
+COPY --chown=appuser:appuser app/fonts/OFL.txt fonts
+
+# Set permissions for static files
+RUN chmod -R 777 static
+
 # Switch to non-root user
 USER appuser
 

@@ -1,5 +1,7 @@
-numpy
 ai-edge-litert
-pillow
 fastapi
+jinja2
+numpy
+pillow
+python-multipart
 uvicorn
