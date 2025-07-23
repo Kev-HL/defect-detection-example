@@ -11,7 +11,6 @@ __pycache__/
 /data/
 # Don't track trained model files
 /models/
-/notebooks/best_model.keras
 
 # VSCode
 # Editor-specific settings
@@ -23,8 +22,5 @@ __pycache__/
 # Catch other .env-like files
 *.env
 
-# Except (un-ignore) the final subdirectory
-!models/final/
-
-# Except (un-ignore) the model file in the final subdirectory
+# Except (un-ignore) the final model file for deployment
 !models/final/best_model.tflite
