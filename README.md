@@ -1,3 +1,13 @@
+>
+> 🚨 **Deprecated Repository** 🚨
+>
+> This repository has been abandoned following a major pivot in the project's approach.  
+> The project is no longer maintained here.
+> 
+> Active development continues in [Capsule Defect Detection and Segmentation with ConvNeXt+U-Net and FastAPI](https://github.com/Kev-HL/capsule-defect-segmentation-api)
+>
+> 
+
 # Defect Detection Example
 
 This project tackles a real-world computer vision problem: image classification and object detection applied locating defects on medicinal capsules.  
